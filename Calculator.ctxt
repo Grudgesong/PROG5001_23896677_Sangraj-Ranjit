@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=Calculator
+comment1.params=
+comment1.target=Calculator()
+comment10.params=args
+comment10.target=void\ main(java.lang.String[])
+comment2.params=
+comment2.target=void\ CreateCalcGUI()
+comment3.params=
+comment3.target=void\ definePanels()
+comment4.params=
+comment4.target=void\ setItems()
+comment5.params=e
+comment5.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment6.params=
+comment6.target=void\ calculate()
+comment7.params=c
+comment7.target=int\ isOperator(char)
+comment8.params=infix
+comment8.target=java.lang.String\ convert(java.lang.String)
+comment9.params=postfix
+comment9.target=double\ evaluate(java.lang.String)
+numComments=11
