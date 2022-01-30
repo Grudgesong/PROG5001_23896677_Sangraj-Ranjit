@@ -6,6 +6,8 @@ import java.util.Stack;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.ArrayList;
+import java.io.IOException;
+
 /**
  * Write a description of class SimpleCalc here.
  *
@@ -141,6 +143,9 @@ public class Calculator1 extends JFrame implements ActionListener {
             
             case("posNeg"):
             //call the method of pos neg which multiply the number by -1
+            String newValue = display.getText();
+            int neg = Integer.parseInt(newValue);
+            display.setText(neg*-1+"");
             break;
             case("equal"):
             calculate();
@@ -150,6 +155,7 @@ public class Calculator1 extends JFrame implements ActionListener {
         }
     }
     public void calculate(){
+        try{
         userInput=display.getText();
         // String[] numbers=userInput.split("[^0-9]");
         // for(int i=0;i<numbers.length;i++){
@@ -159,7 +165,11 @@ public class Calculator1 extends JFrame implements ActionListener {
         String postfix = convert(userInput);
         double result = evaluate(postfix);
         display.setText(""+result);
-
+        }
+        catch(Exception ioe){
+            JOptionPane.showMessageDialog(null, userInput, "ERROR", JOptionPane.ERROR_MESSAGE);
+    }
+        
     }
     private int isOperator(char c) {
         switch (c) {
